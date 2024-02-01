@@ -5,5 +5,6 @@ using UnityEngine;
 public class AHKEnv
 {
     public static int CombatPoint;
-    public static int Energy;
+    public static int HP;
+    public static int MP;
 }

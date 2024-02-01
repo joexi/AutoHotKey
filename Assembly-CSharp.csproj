@@ -73,6 +73,9 @@
     <Compile Include="Assets\Scripts\AHK\AHKSetting.cs" />
     <Compile Include="Assets\Scripts\AHK\AHKSkill.cs" />
     <Compile Include="Assets\Scripts\AHK\AHKTrigger.cs" />
+    <Compile Include="Assets\Scripts\AHK\Grabber\AHKGrabber.cs" />
+    <Compile Include="Assets\Scripts\AHK\Grabber\AHKGrabberCombatPoint.cs" />
+    <Compile Include="Assets\Scripts\AHK\Grabber\AHKGrabberHPMP.cs" />
     <Compile Include="Assets\Scripts\AHK\IAHK.cs" />
     <Compile Include="Assets\Scripts\AutoJob.cs" />
     <Compile Include="Assets\Scripts\AutoJobPool.cs" />

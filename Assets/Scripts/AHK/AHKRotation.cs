@@ -4,6 +4,9 @@ using UnityEngine;
 public class AHKRotation : MonoBehaviour,IAHK
 {
     public List<AHKSkill> SkillList = new List<AHKSkill>();
+    public List<AHKGrabber> GrabberList = new List<AHKGrabber>();
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +28,16 @@ public class AHKRotation : MonoBehaviour,IAHK
     {
         if (Time.frameCount % 30 == 0)
         {
-
-            //AHKPos p;
-            //AHKColorPicker.GetCursorPos(out p);
-            //Debug.LogError(p.x + " " + p.y);
-
+            Grab();
             Excute();
+        }
+    }
+
+    public void Grab()
+    {
+        for (int i = 0; i < GrabberList.Count; i++)
+        {
+            GrabberList[i].Grab();
         }
     }
 
