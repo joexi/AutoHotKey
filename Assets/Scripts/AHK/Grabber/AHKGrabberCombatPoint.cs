@@ -11,3 +11,4 @@ public class AHKGrabberHPMP : AHKGrabber
         AHKEnv.MP = this.Result.B;
     }
 }
+

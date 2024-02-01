@@ -23,6 +23,10 @@ public class AHKRotation : MonoBehaviour,IAHK
         SkillList.Add(skill);
     }
 
+    public virtual void AddGrabber(AHKGrabber grabber)
+    {
+        GrabberList.Add(grabber);
+    }
     // Update is called once per frame
     void Update()
     {
