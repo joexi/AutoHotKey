@@ -7,7 +7,7 @@ public class AHKSkill
     public string SkillName;
     public int SkillID;
     public KeyCode SkillHotkey;
-    public AHKTriggerColor Trigger = new AHKTriggerColor();
+    public AHKTrigger Trigger = null;
     public AHKColor MatchupColor = new AHKColor(0, 0, 0);
     public AHKPos MatchupPos = new AHKPos();
     public bool IsMatchup()
@@ -25,7 +25,16 @@ public class AHKSkill
     {
         this.SkillName = skillName;
         this.SkillHotkey = hotkey;
-        this.Trigger.MatchupColor = color;
-        this.Trigger.MatchupPos = pos;
+        var t = new AHKTriggerColor();
+        t.MatchupColor = color;
+        t.MatchupPos = pos;
+        this.Trigger = t;
+    }
+
+    public AHKSkill(string skillName, KeyCode hotkey)
+    {
+        this.SkillName = skillName;
+        this.SkillHotkey = hotkey;
+        this.Trigger = new AHKTrigger();
     }
 }
