@@ -7,24 +7,12 @@ public class AHKSkill
     public string SkillName;
     public int SkillID;
     public KeyCode SkillHotkey;
+    public AHKTrigger Trigger = new AHKTrigger();
     public AHKColor MatchupColor = new AHKColor(0, 0, 0);
     public AHKPos MatchupPos = new AHKPos();
-    public bool IsMatchup(AHKColor color)
+    public bool IsMatchup()
     {
-        return MatchupColor.IsEquals(color);
-    }
-
-    public void SetMatchupColor(int r, int g, int b)
-    {
-        MatchupColor.R = r;
-        MatchupColor.G = g;
-        MatchupColor.B = b;
-    }
-
-    public void SetMatchupPos(int x, int y)
-    {
-        MatchupPos.x = x;
-        MatchupPos.y = y;
+        return Trigger.IsMatchup();
     }
 
     public void Excute()
@@ -37,7 +25,7 @@ public class AHKSkill
     {
         this.SkillName = skillName;
         this.SkillHotkey = hotkey;
-        this.MatchupColor = color;
-        this.MatchupPos = pos;
+        this.Trigger.MatchupColor = color;
+        this.Trigger.MatchupPos = pos;
     }
 }

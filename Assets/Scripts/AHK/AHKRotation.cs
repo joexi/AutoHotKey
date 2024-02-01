@@ -39,15 +39,12 @@ public class AHKRotation : MonoBehaviour,IAHK
         for (int i = 0; i < SkillList.Count; i++)
         {
             var skill = SkillList[i];
-            var color = AHKColorPicker.GetColor(skill.MatchupPos);
-            if (skill.IsMatchup(color))
+            if (skill.IsMatchup())
             {
                 return skill;
             }
             else {
                 Debug.Log("not match ");
-                color.Log();
-                skill.MatchupColor.Log();
             }
         }
         return null;
