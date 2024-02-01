@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AHKTrigger
+public class AHKTriggerColor:AHKTrigger
 {
     public AHKColor MatchupColor = new AHKColor(0, 0, 0);
     public AHKPos MatchupPos = new AHKPos();
-    public bool IsMatchup()
+    public override bool IsMatchup()
     {
         var color = AHKColorPicker.GetColor(MatchupPos);
         return MatchupColor.IsEquals(color);
@@ -24,7 +24,7 @@ public class AHKTrigger
         MatchupPos.y = y;
     }
 
-    public AHKTrigger()
+    public AHKTriggerColor()
     { 
     
     }

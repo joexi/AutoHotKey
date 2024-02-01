@@ -7,4 +7,6 @@ public class AHKEnv
     public static int CombatPoint;
     public static int HP;
     public static int MP;
+    public static bool IsStealth;
+
 }

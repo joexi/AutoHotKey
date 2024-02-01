@@ -7,7 +7,7 @@ public class AHKSkill
     public string SkillName;
     public int SkillID;
     public KeyCode SkillHotkey;
-    public AHKTrigger Trigger = new AHKTrigger();
+    public AHKTriggerColor Trigger = new AHKTriggerColor();
     public AHKColor MatchupColor = new AHKColor(0, 0, 0);
     public AHKPos MatchupPos = new AHKPos();
     public bool IsMatchup()
